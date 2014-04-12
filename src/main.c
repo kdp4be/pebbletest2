@@ -34,7 +34,7 @@ void select_click_handler(ClickRecognizerRef recognizer, void *context) {
     char h[24];
     health = HEALTH;
     int total = HEALTH;
-    int me = 1;
+    me = 1;
     snprintf(h, 24, "ME: \nHP: %d/%d \nLvl: 1 \nD: 2", health, total);
   	text_layer_set_text(text_layer, h);
   }
@@ -62,14 +62,14 @@ void handle_init(void) {
 	// Set the text, font, and text alignment
   //text_layer_set_text(text_layer, "HP:");
   //const char h[] = "HP:";
-  char h[50];
+  char *h = (char*)malloc(128*sizeof(char));
   health = HEALTH;
   int total = HEALTH;
   int me = 1;
-  snprintf(h, 50, "ME: \nHP: %d/%d \nLvl: 1 \nDamage: 2", health, total);
+  snprintf(h, 128, "ME         Fighter-33\nHP: %d      Mana: 42 \nP: 42   D: 32   S: 33\nAC: 32 \nDam: 56-98", health);
   APP_LOG(0, h);
 	text_layer_set_text(text_layer, h);
-	text_layer_set_font(text_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD));
+	text_layer_set_font(text_layer, fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD));
 	text_layer_set_text_alignment(text_layer, GTextAlignmentLeft);
 	
 	// Add the text layer to the window
