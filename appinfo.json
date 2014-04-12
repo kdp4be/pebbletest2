@@ -1,0 +1,18 @@
+{
+    "versionLabel": "1.0",
+    "uuid": "5ac25981-72ee-4a5a-b879-084c1cefdfc2",
+    "appKeys": {},
+    "longName": "test 2",
+    "versionCode": 1,
+    "capabilities": [
+        ""
+    ],
+    "shortName": "test 2",
+    "companyName": "kdp4be@virginia.edu",
+    "watchapp": {
+        "watchface": false
+    },
+    "resources": {
+        "media": []
+    }
+}
